@@ -82,10 +82,3 @@ def search(search_string=STRINGS_FOR_TEST):
             pub_list_data.append(pub_data)
 
     return pd.DataFrame(pub_list_data)
-
-if __name__== '__main__':
-    print "test started"
-    test_pub = search(["collaborative writing"])
-    #print test_pub.head()
-    print test_pub[test_pub['Title'].str.contains("AI")]
-    print "test ended"

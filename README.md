@@ -1,4 +1,4 @@
-# dblp-pub
+# dblp publication scraper
 A scraper that downloads search results from DBLP. You can search for any list of keywords.
 
 Scraping dblp is allowed by them and they even offer an API for it. The API, however, is restricted to the search for authors. 
@@ -6,7 +6,7 @@ This is why I wrote this scraper, which allows you to also search for publicatio
 
 ## Installation
 
-Just type "pip install dblp-pub" in your terminal and it will get installed. You can also clone this repository and type "python setup.py install" after switching to the downloaded folder.
+Just type "pip install dblp" in your terminal and it will get installed. You can also clone this repository and type "python setup.py install" after switching to the downloaded folder.
 
 ## How to use it?
 
@@ -19,7 +19,7 @@ With this library you get a table for every search request, so you can easily co
 and the lookup for the search phrase "Collaborative Writing".
 
 ```python
-import dblp-pub as dblp
+import dblp
 
 results = dblp.search(["Collaborative Writing"])
 

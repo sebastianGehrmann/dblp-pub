@@ -49,11 +49,11 @@ def get_pub_data(pub):
             elif 'publ' in class_of_content_item:
                 link = content_item.contents[0].find('a').attrs.get('href', "nothing")
 
-    return {'type': ptype,
-            'link': link,
-            'authors': authors,
-            'title': title,
-            'where': where}
+    return {'Type': ptype,
+            'Link': link,
+            'Authors': authors,
+            'Title': title,
+            'Where': where}
 
 def search(search_string=STRINGS_FOR_TEST):
     '''
@@ -78,14 +78,14 @@ def search(search_string=STRINGS_FOR_TEST):
         if type(pub_data) == int:
             curr_year = pub_data
         else:
-            pub_data['year'] = curr_year
+            pub_data['Year'] = curr_year
             pub_list_data.append(pub_data)
 
     return pd.DataFrame(pub_list_data)
 
 if __name__== '__main__':
     print "test started"
-    test_pub = search(["Collaborative", "Writing"])
-    print test_pub.head()
-    print
+    test_pub = search(["collaborative writing"])
+    #print test_pub.head()
+    print test_pub[test_pub['Title'].str.contains("AI")]
     print "test ended"

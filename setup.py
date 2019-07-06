@@ -10,6 +10,7 @@ setup(
     license='LICENSE.txt',
     description='Downloads and formats search results from dblp',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     install_requires=[
         "beautifulsoup4>=4.3.2",
         "pandas>=0.16.2",
